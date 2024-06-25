@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f9f9f9;
+}
+
+.container {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background: linear-gradient(90deg, #54880e, #f2f2f2);
+  border-radius: 50px;
+  box-shadow: 0 0 60px rgba(130, 117, 117, 0.3);
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container img {
+  position: absolute;
+  right: -40px;
+  bottom: -160px;
+  width: 60%;
+  transform: rotate(260deg);
+}
+
+.form-conatiner {
+  z-index: 2;
+}
+
+.container .form-conatiner.login {
+  transition: 0.7s ease-in-out;
+  transition-delay: .7s;
+}
+
+.container.active .form-conatiner.login {
+  transition-delay: 0%;
+  transform: translateX(-400px);
+}
+
+.form-conatiner.register {
+  position: absolute;
+  margin-top: 15px;
+  transform: translateX(-400px);
+  transition: 0.7s ease-in-out;
+
+}
+
+.container.active .form-conatiner.register{
+  transition-delay: .7s;
+  transform: translateX(0);
+
+}
+
+.container .text-right {
+  position: absolute;
+  top: 60px;
+  right: 150px;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  font-size: 50px;
+  user-select: none;
+  font-family: "Playwrite US Trad", cursive;
+  text-shadow: 1px 1px 0 #0c0c0c;
+}
+
+.container .text-right::before {
+  content: "Back";
+  position: absolute;
+  top: 60px;
+  right: -50px;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #f6f3f3;
+}
+
+.input-box {
+  position: relative;
+  width: 320px;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 40px;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0 20px 0 40px;
+}
+
+.input-box input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.input-box .icon {
+  position: absolute;
+  left: 15px;
+  color: #f2f2f2;
+  font-size: 1.2rem;
+  line-height: 55px;
+}
+
+.forgot-pass {
+  margin: -15px 0 15px 15px;
+}
+
+.forgot-pass a {
+  color: #fff;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.forgot-pass a:hover {
+  text-decoration: underline;
+}
+
+button {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #54880e;
+  font-weight: 500;
+}
+
+.sign-link {
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 25px 0;
+}
+
+.sign-link p {
+  color: #fff;
+}
+
+.sign-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sign-link p a:hover {
+  text-decoration: underline;
+}
